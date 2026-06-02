@@ -1,2 +1,9 @@
 todo-docker/data/*
 !todo-docker/data/.gitkeep
+
+
+entorno/
+__pycache__/
+
+
+*.db
