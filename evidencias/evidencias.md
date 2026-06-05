@@ -46,6 +46,10 @@ Devuelve registros si cumplen al menos una de las condiciones establecidas (ej: 
 Devuelve registros exclusivamente cuando cumplen todas las condiciones establecidas a la vez.
 ![Consulta AND](./img/consultaAND.png)
 
+### D. Ejecución de Consultas Nueva
+Presentar los recursos académicos de una facultad específica.
+![Consultas en SQLite](./img/CONSULTA_NUEVA_SQLITE.png)
+
 ---
 
 ## 3. Evidencias en PostgreSQL
@@ -75,6 +79,10 @@ Evidencia de la correcta ejecución de la inserción y carga de datos en la base
 Captura que muestra el resultado de las consultas ejecutadas sobre el motor de PostgreSQL:
 ![Consultas en PostgreSQL](./img/CONSULTAS_POSGRES.png)
 
+### D. Ejecución de Consultas Nueva
+Presentar los recursos académicos de una facultad específica.
+![Consultas en PostgreSQL](./img/CONSULTA_NUEVA_POSTGRES.png)
+
 ---
 
 ## 4. Evidencias en MariaDB
@@ -103,3 +111,9 @@ Evidencia de la correcta ejecución de la inserción y carga de datos en la base
 ### C. Ejecución de Consultas
 Captura que muestra el resultado de las consultas ejecutadas sobre el motor de MariaDB:
 ![Consultas en MariaDB](./img/CONSULTAS_MARIADB.png)
+
+
+### D. Ejecución de Consultas Nueva
+Presentar los recursos académicos de una facultad específica.
+![Consultas en MariaDB](./img/CONSULTA_NUEVA_MARIA.png)
+
