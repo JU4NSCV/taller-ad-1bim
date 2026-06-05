@@ -7,9 +7,10 @@ Base = declarative_base()
 class Facultad(Base):
     __tablename__ = 'facultad'
     id = Column(Integer, primary_key=True)
-    nombre_oficial = Column(String, nullable=False)
-    ubicacion = Column(String, nullable=False)
-    decano = Column(String, nullable=False)
+    # Longitudes añadidas para MariaDB
+    nombre_oficial = Column(String(150), nullable=False)
+    ubicacion = Column(String(150), nullable=False)
+    decano = Column(String(100), nullable=False)
     
     carreras = relationship("Carrera", back_populates="facultad")
 
@@ -19,8 +20,8 @@ class Facultad(Base):
 class Carrera(Base):
     __tablename__ = 'carrera'
     id = Column(Integer, primary_key=True)
-    nombre = Column(String, nullable=False)
-    codigo = Column(String, unique=True, nullable=False)
+    nombre = Column(String(150), nullable=False)
+    codigo = Column(String(50), unique=True, nullable=False)
     
     facultad_id = Column(Integer, ForeignKey('facultad.id'), nullable=False)
     
@@ -33,10 +34,10 @@ class Carrera(Base):
 class Profesor(Base):
     __tablename__ = 'profesor'
     id = Column(Integer, primary_key=True)
-    nombres = Column(String, nullable=False)
-    apellidos = Column(String, nullable=False)
-    correo = Column(String, unique=True, nullable=False)
-    especialidad = Column(String, nullable=False)
+    nombres = Column(String(100), nullable=False)
+    apellidos = Column(String(100), nullable=False)
+    correo = Column(String(150), unique=True, nullable=False)
+    especialidad = Column(String(100), nullable=False)
     
     carrera_id = Column(Integer, ForeignKey('carrera.id'), nullable=False)
     
@@ -49,10 +50,10 @@ class Profesor(Base):
 class RecursoAcademico(Base):
     __tablename__ = 'recurso_academico'
     id = Column(Integer, primary_key=True)
-    titulo = Column(String, nullable=False)
-    fecha_publicacion = Column(String) 
-    tipo = Column(String, nullable=False)
-    url = Column(String)
+    titulo = Column(String(200), nullable=False)
+    fecha_publicacion = Column(String(50)) 
+    tipo = Column(String(50), nullable=False)
+    url = Column(String(255))
     
     profesor_id = Column(Integer, ForeignKey('profesor.id'), nullable=False)
     
